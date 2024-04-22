@@ -51,6 +51,8 @@ public class Graphs{
 
         System.out.println("Please enter the number of vertices in your graph:");
         int v = s.nextInt();
+
+        //use number of edges to run loop 
         System.out.println("Please enter the number of edges in your graph:");
         int e = s.nextInt();
 
