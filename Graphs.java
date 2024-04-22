@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class Graphs{
     int vertices;
@@ -45,15 +46,22 @@ public class Graphs{
     }
 
     public static void main(String[] args){
-        Graphs graph = new Graphs(6);
 
-        graph.addEdges(0,3);
-        graph.addEdges(0,4);
-        graph.addEdges(1,2);
-        graph.addEdges(2, 3);
-        graph.addEdges(2,4);
-        graph.addEdges(2,5);
-        graph.addEdges(1, 1);
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Please enter the number of vertices in your graph:");
+        int v = s.nextInt();
+        System.out.println("Please enter the number of edges in your graph:");
+        int e = s.nextInt();
+
+        Graphs graph = new Graphs(v);
+        for(int i=0; i<e; i++){
+            System.out.println("Please enter the source vertex, then the destination vertex:");
+            int source = s.nextInt();
+            int dest = s.nextInt();
+            graph.addEdges(source, dest);
+        }
+
 
         graph.displayGraph();
 
