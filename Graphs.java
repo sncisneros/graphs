@@ -64,6 +64,7 @@ public class Graphs{
             graph.addEdges(source, dest);
         }
 
+        s.close();
 
         graph.displayGraph();
 
